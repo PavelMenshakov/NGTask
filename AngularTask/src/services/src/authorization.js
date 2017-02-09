@@ -1,8 +1,5 @@
 "use strict";
-
-var an = namespace('ajsApp.services.Authorization');
-an.$module = angular.module('ajsApp.services.Authorization',[
-]).service('Authorization', [
+ajsApp.service('Authorization', [
     '$http', '$q', '$window', 'md5',
         function($http, $q, $window, md5) {
             var authServ = {};

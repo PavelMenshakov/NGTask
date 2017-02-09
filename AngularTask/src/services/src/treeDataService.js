@@ -1,8 +1,4 @@
-"use strict";
-
-var tn = namespace('ajsApp.services.TreeData');
-tn.$module = angular.module('ajsApp.services.TreeData',[
-]).service('TreeData',[
+ajsApp.service('TreeData',[
     '$http',
     function($http){
     var treeData = {};

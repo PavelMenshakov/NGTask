@@ -1,8 +1,4 @@
-"use strict";
-
-var vn = namespace('ajsApp.directives.emailValidation');
-vn.$module = angular.module('ajsApp.directives.emailValidation', [
-]).directive('emailValidation', function() {  // email validation
+ajsApp.directive('emailValidation', function() {  // email validation
     var EMAIL_REGEXP = new RegExp('[a-zA-Z]@epam\.com$'),
         isValid = function(s) {
             return (EMAIL_REGEXP.test(s));

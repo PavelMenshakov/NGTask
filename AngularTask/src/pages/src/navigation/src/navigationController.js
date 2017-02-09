@@ -1,10 +1,4 @@
-"use strict";
-
-var nn = namespace('ajsApp.pages.navigation');
-nn.$module = angular.module('ajsApp.pages.navigation', [
-    'ajsApp.modal',
-	'ui.bootstrap'
-]).controller('navigationCtrl', ['$scope','$translate','$uibModal', 'Authorization',
+ajsApp.controller('navigationCtrl', ['$scope','$translate','$uibModal', 'Authorization',
     '$state', '$http', '$timeout',
     function($scope, $translate, $uibModal, Authorization, $state, $http, $timeout) {
         var sessionTrack;

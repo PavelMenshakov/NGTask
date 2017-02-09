@@ -1,6 +1,6 @@
 "use strict";
 
-ajsApp.$module.config([ "$provide", function( $provide )
+ajsApp.config([ "$provide", function( $provide )
 {
     $provide.decorator( '$log', [ "$delegate", function( $delegate ) {
         var logFn = $delegate.log;

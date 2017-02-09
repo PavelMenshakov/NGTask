@@ -1,6 +1,4 @@
-var rn = namespace('ajsApp.services.recursion');
-rn.$module = angular.module('ajsApp.services.recursion',[
-]).service('TreeRecursionFix', [
+ajsApp.service('TreeRecursionFix', [
     '$compile',
     function($compile) {
     return {

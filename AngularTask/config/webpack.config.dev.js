@@ -21,6 +21,18 @@ module.exports = {
     extensions: ['.js', '.json', '.jsx', ''],
   },
   module: {
+	preLoaders: [
+        {
+          test: /.spec\.js$/,
+          include: /app/,
+          exclude: /(node_modules)/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['es2015'],
+            cacheDirectory: true,
+          }
+        }
+	],
     loaders: [
       {
         exclude: [
@@ -82,5 +94,9 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       },
     }),
+	new webpack.ProvidePlugin({
+            'Promise': 'es6-promise',
+			'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+        }),
   ],
 };

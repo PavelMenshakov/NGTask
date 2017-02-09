@@ -6,11 +6,7 @@ import {loginTpl} from '../pages/src/login/src/tpl/login.tpl.js';
 import {loginRmTpl} from '../pages/src/login/src/tpl/login-remind.tpl.js';
 
 
-var rn = namespace('ajsApp.routing');
-rn.$module = angular.module('ajsApp.routing', [
-    'ajsApp.services'
-])
-    .config(function(routingRestructuringProvider, $urlRouterProvider) {
+ajsApp.config(function(routingRestructuringProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/home');
 

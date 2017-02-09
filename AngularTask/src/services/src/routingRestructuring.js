@@ -1,9 +1,4 @@
-"use strict";
-
-var cn = namespace('ajsApp.services.routing');
-cn.$module = angular.module('ajsApp.services.routing',[
-    'ui.router'
-]).provider('routingRestructuring', ['$stateProvider',function($stateProvider){
+ajsApp.provider('routingRestructuring', ['$stateProvider',function($stateProvider){
 
     var me = this;
 

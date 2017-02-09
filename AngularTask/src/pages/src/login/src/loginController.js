@@ -1,11 +1,4 @@
-"use strict";
-
-var ln = namespace('ajsApp.pages.login');
-ln.$module = angular.module('ajsApp.pages.login', [
-        'ajsApp.directives',
-        'ajsApp.services'
-    ])
-    .controller('loginCtrl', [ '$scope', '$state','Authorization', '$translate',
+ajsApp.controller('loginCtrl', [ '$scope', '$state','Authorization', '$translate',
         function($scope, $state, Authorization, $translate) {
             $scope.login = function(user) {
                 Authorization.login(user).then(function(data){

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.dev.js --hot --compress --content-base public --public-path / --history-api-fallback --host localhost",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.config.prod.js",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom",
+    "test:single": "karma start karma.conf.js --single-run --browsers PhantomJS",
+	"test:debug": "karma start karma.conf.js --single-run=false --browsers PhantomJS --debug"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "babel-loader": "6.2.10",
     "babel-plugin-transform-export-extensions": "6.8.0",
     "babel-preset-es2015": "^6.22.0",
+    "chai": "^3.5.0",
     "cross-env": "3.1.4",
     "css-loader": "0.26.1",
     "eslint": "3.13.1",
@@ -28,8 +31,20 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
     "html-webpack-plugin": "2.26.0",
+    "jasmine-core": "^2.5.2",
     "jest": "18.1.0",
     "json-loader": "0.5.4",
+    "karma": "^1.4.1",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.2",
+    "mocha": "^3.2.0",
+    "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
     "style-loader": "0.13.1",
@@ -43,12 +58,17 @@
     "angular-animate": "^1.6.1",
     "angular-bootstrap": "^0.12.2",
     "angular-md5": "^0.1.10",
+    "angular-mocks": "^1.6.1",
     "angular-sanitize": "^1.6.1",
     "angular-translate": "^2.9.0",
     "angular-translate-loader-static-files": "^2.9.0",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^0.4.2",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "es6-promise": "^4.0.5",
+    "exports-loader": "^0.6.3",
+    "imports-loader": "^0.7.0",
+    "whatwg-fetch": "^2.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
